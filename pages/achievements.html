@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成果展示 - MVIP Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .achievement-card {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .achievement-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .achievement-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        .achievement-list li:before {
+            content: "•";
+            color: #003366;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .awards-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .awards-image {
+            width: 100%;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .awards-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+            .awards-image {
+                height: 250px;
+            }
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .project-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover .project-image {
+            background-color: #f8f8f8;
+        }
+        .project-card:hover img {
+            transform: scale(1.02);
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-content h3 {
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: #003366;
+        }
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MVIP Lab</a>
+            <ul class="nav-links">
+                <li><a href="about.html">实验室简介</a></li>
+                <li><a href="teachers.html">指导老师</a></li>
+                <li><a href="members.html">实验室成员</a></li>
+                <li><a href="achievements.html">成果展示</a></li>
+                <li><a href="lab.html">实验室环境</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <section class="section">
+            <h1 class="section-title">竞赛成果</h1>
+            <div class="card achievement-card">
+                <p style="margin-bottom: 0.8rem;">实验室成员累计获得国家级及省部级竞赛奖项30余项，包括：</p>
+                <ul class="achievement-list">
+                    <li>中国国际大学生创新大赛铜奖</li>
+                    <li>挑战杯“揭榜挂帅”专项赛二等奖</li>
+                    <li>数字中国创新大赛-低空经济赛道三等奖（20000元，国家发展改革委、国家数据局、国家网信办、工业和信息化部、福建省人民政府主办）</li>
+                    <li>中国大学生物理学术竞赛一等奖</li>
+                    <li>全国大学生物理实验竞赛（创新）一等奖</li>
+                    <li>中国机器人及人工智能大赛一等奖</li>
+                    <li>中国工程机器人大赛暨国际公开赛一等奖（冠军，中国人工智能学会）</li>
+                    <li>中国机器人大赛暨RoboCup机器人世界杯中国赛二等奖（中国自动化学会）</li>
+                    <li>国际无人飞行器创新大奖赛优秀奖（1000元，中国航空学会）</li>
+                    <li>南京航空航天大学优秀毕业设计（论文）一等奖一项、二等奖一项</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 class="section-title">科研成果</h1>
+            <div class="card achievement-card">
+                <h2>荣誉与知识产权</h2>
+                <div class="awards-content">
+                    <h3>科研成果</h3>
+                    <ul class="achievement-list">
+                        <li>国家发明专利申请3项（2项已公开）</li>
+                        <li>软件著作权授权5项</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;">荣誉表彰</h3>
+                    <ul class="achievement-list">
+                        <li>2024年校通令嘉奖×1</li>
+                        <li>国家奖学金×3</li>
+                        <li>年度特别嘉奖×1</li>
+                    </ul>
+                </div>
+                <div class="awards-image">
+                    <img src="../images/award.png" alt="荣誉展示">
+                </div>
+            </div>
+
+            <div class="card achievement-card">
+                <h2>创新项目</h2>
+                <ul class="achievement-list">
+                    <li>江苏省大学生创新训练项目：双波段视觉信息融合的无人机自主着降引导技术（2023.6-2024.6），良好结题</li>
+                    <li>南航-508所校企协同育人项目（省级）：培养未来航天工程师的项目开发（2023.6-2024.6），优秀结题</li>
+                    <li>江苏省大学生创新训练项目：基于无人机平台的隧道裂缝检测系统研究（2025.6-2026.6）</li>
+                    <li>校级大学生创新训练项目：光电智能导引跟踪系统（2024.6-2025.6），优秀结题</li>
+                    <li>校级大学生创新训练项目：无干涉编码孔径相关全息术的实验设计（2024.6-2025.6），优秀结题</li>
+                    <li>校级大学生创新训练项目：基于传感器融合的无人机侦察多目标定位系统研制（2025.6-2026.6）</li>
+                    <li>校级大学生创新训练项目：基于3DGS的物体重建与智能分割（2025.6-2026.6）</li>
+                    <li>本科生自由探索计划项目：基于日盲区紫外视觉的无人机位姿测量方法研究（2024.12-2025.6），优秀结题</li>
+                    <li>本科生天目启航项目：基于紫外信号的无人机机间通信技术研究（2024.12-2025.6），良好结题</li>
+                    <li>航天学院天巡杯本科生创新实践竞赛培育项目：基于日盲区紫外视觉的无人机位姿测量方法研究（2024.11-2025.11）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 class="section-title">研发项目</h1>
+            <h2>代表性项目展示</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/show1.png" alt="双波段视觉信息融合">
+                    </div>
+                    <div class="project-content">
+                        <h3>双波段视觉信息融合的无人机自主着降系统</h3>
+                        <p>基于双波段视觉信息融合技术，实现无人机精准着降引导，提高飞行安全性和可靠性。</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/show2.gif" alt="3DGS展示系统" style="object-fit: contain; background-color: white;">
+                    </div>
+                    <div class="project-content">
+                        <h3>基于3DGS的文物三维展示系统</h3>
+                        <p>采用先进的3DGS技术，实现中国海外文物的三维重建与展示。</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/show3.gif" alt="隧道巡检系统" style="object-fit: contain; background-color: white;">
+                    </div>
+                    <div class="project-content">
+                        <h3>多模态信息融合的隧道巡检系统</h3>
+                        <p>结合多种传感器信息，打造智能化的无人机隧道巡检解决方案。</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/show4.png" alt="三维成像系统">
+                    </div>
+                    <div class="project-content">
+                        <h3>基于线结构光的高精度三维重建</h3>
+                        <p>利用结构光主动视觉技术，实现高精度的三维重建与测量。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card achievement-card" style="margin-top: 2rem;">
+                <h2>科普推广</h2>
+                <p style="margin-bottom: 2rem;">这些项目已结合社会实践打造了一系列的科普课程，在线下多个社区开展科普讲解，受到央视新闻、人民日报等媒体的报道。</p>
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <div class="slide" style="background-image: url('../images/popularization1.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization2.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization3.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization4.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization5.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization6.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization7.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization8.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization9.jpg');"></div>
+                        <div class="slide" style="background-image: url('../images/popularization10.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 机器视觉与智能感知实验室（MVIP Lab）版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
