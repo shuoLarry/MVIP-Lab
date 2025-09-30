@@ -133,6 +133,18 @@
                 height: 250px;
             }
         }
+        .mobile-mode .awards-grid {
+            grid-template-columns: 1fr;
+        }
+        .mobile-mode .awards-image {
+            height: 250px;
+        }
+        .mobile-mode .project-grid {
+            grid-template-columns: 1fr;
+        }
+        .mobile-mode .project-image {
+            height: 250px;
+        }
     </style>
 </head>
 <body>
@@ -283,5 +295,12 @@
             <p>© 2025 机器视觉与智能感知实验室（MVIP Lab）版权所有</p>
         </div>
     </footer>
+
+<script>
+  if (localStorage.getItem('mobileMode') === 'true') {
+    document.body.classList.add('mobile-mode');
+  }
+</script>
+
 </body>
 </html>

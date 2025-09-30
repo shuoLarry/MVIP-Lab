@@ -67,11 +67,30 @@
         </section>
     </div>
 
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="toggleMobile">切换到手机版</button>
+    </div>
+
     <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
             <p>© 2025 机器视觉与智能感知实验室（MVIP Lab）版权所有</p>
         </div>
     </footer>
+
+<script>
+  const toggleButton = document.getElementById('toggleMobile');
+  const isMobile = localStorage.getItem('mobileMode') === 'true';
+  if (isMobile) {
+    document.body.classList.add('mobile-mode');
+  }
+  toggleButton.textContent = isMobile ? '切换到桌面版' : '切换到手机版';
+  toggleButton.addEventListener('click', () => {
+    const current = document.body.classList.toggle('mobile-mode');
+    localStorage.setItem('mobileMode', current);
+    toggleButton.textContent = current ? '切换到桌面版' : '切换到手机版';
+  });
+</script>
+
 </body>
 </html>
