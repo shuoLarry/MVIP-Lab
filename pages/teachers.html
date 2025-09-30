@@ -50,6 +50,20 @@
             border-radius: 4px;
             border-left: 3px solid #003366;
         }
+        .teacher-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .teacher-photo {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
     </style>
 </head>
 <body>
@@ -74,7 +88,10 @@
             <h1 class="section-title">指导老师</h1>
             
             <div class="card professor-card">
-                <h2>徐诚 助理研究员</h2>
+                <div class="teacher-header">
+                    <h2>徐诚 助理研究员</h2>
+                    <img src="../images/teacher.png" alt="徐诚 助理研究员" class="teacher-photo">
+                </div>
                 <div class="info-section">
                     <h3>个人简介</h3>
                     <p>徐诚，博士/博士后，主要研究方向为机器视觉测量、目标探测与定位、集群无人机测控技术等。</p>
@@ -178,12 +195,5 @@
             <p>© 2025 机器视觉与智能感知实验室（MVIP Lab）版权所有</p>
         </div>
     </footer>
-
-<script>
-  if (localStorage.getItem('mobileMode') === 'true') {
-    document.body.classList.add('mobile-mode');
-  }
-</script>
-
 </body>
 </html>
